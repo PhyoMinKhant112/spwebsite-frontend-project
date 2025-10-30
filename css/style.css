@@ -1,0 +1,471 @@
+/* for nav bar */
+.my-LogoResize {
+   width: 20%;
+}
+
+.my-navBorder {
+    box-shadow: 0px 2px 10px rgb(176, 176, 176);
+}
+
+.my-navDesign:hover {
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+/* carousel */
+
+.my-slideItem {
+    height: 550px;
+}
+
+.my-slideImg {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* Home page begins ================================================= */
+
+/* cards */
+
+.my-cardWidth {
+    height: 200px;
+    overflow: auto;
+}
+
+.my-cardMove {
+    transition: transform 0.5s ease;
+}
+
+.my-cardMove:hover {
+    transform: translateY(-15px);
+}
+
+
+/* SP song Part */
+
+.my-CDimg {
+    width: 200px;
+}
+
+.my-songBg {
+    background-color: rgb(247, 236, 236);
+    border-bottom: 10px solid red;
+}
+
+.my-cdBg {
+    background-color: rgb(247, 212, 212);
+}
+
+.my-audioButton {
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+
+@keyframes imgRotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.my-rotatingImage {
+    animation-name: imgRotation;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.my-rotatingImage.rotating {
+    animation-play-state: running;
+}
+
+@keyframes dancingMusicNotes {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.my-musicNotes {
+    width: 60px;
+    animation: dancingMusicNotes 4s infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+.my-musicNotes.dancing {
+    animation-play-state: running;
+}
+
+/* SP Timeline */
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+.my-cards {
+    height: 500px;
+}
+
+/* Flip Cards */
+.my-flipCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* spacing between cards */
+    padding: 1rem 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 280px;
+    height: 320px;
+    perspective: 1000px;
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover {
+    transform: scale(1.03);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    border-radius: 12px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* FRONT SIDE */
+.flip-card-front {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BACK SIDE */
+.flip-card-back {
+    background-color: rgb(245, 75, 75);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+/* === Responsive Fix === */
+@media (max-width: 768px) {
+    .my-flipCards {
+        gap: 1rem;
+    }
+
+    .flip-card {
+        width: 90%;
+        max-width: 320px;
+        height: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .flip-card {
+        width: 95%;
+        height: 280px;
+        margin: 0 auto;
+    }
+}
+
+
+/* SP Food courts */
+.my-containerFc ul {
+    background-color: #f54b4b;
+}
+
+.my-containerFc ul li {
+    list-style: none;
+    color: rgb(255, 255, 255);
+}
+
+.my-fc {
+    background-color: rgb(255, 255, 255);
+}
+
+[id^="my-content-fc"] {
+    display: none;
+}
+
+#fc1 {
+    background-color: #6f2c2c;
+}
+
+.my-fcImg {
+    width: 50%;
+    object-fit: cover;
+}
+
+/* SP Event */
+.my-raceBg {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow: visible; 
+}
+
+.my-raceBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/spRace.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    filter: brightness(0.4);
+    z-index: -1; 
+}
+
+@media (max-width: 768px) {
+    .my-raceBg {
+        height: auto; 
+        min-height: 100vh; 
+        overflow: visible;
+    }
+}
+
+/* Footer */
+.my-line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+a i {
+    color: white;
+}
+
+/* Event Card Container */
+.my-cardBodyEvent {
+    height: 320px; /* fixed height for even alignment on desktop */
+    overflow-y: auto; /* allow scroll if content overflows */
+    border-bottom: 5px solid #f54b4b;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover effect for the card */
+.my-cardBodyEvent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Event Title */
+.my-cardTitleEvent {
+    background-color: #f7f7f7;
+    border-left: 5px solid #f54b4b;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Event Date */
+.card-date {
+    font-weight: 600;
+    color: #444;
+    background: #fff7f7;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+/* Event Location */
+.card-location {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.6rem;
+}
+
+/* Event Description */
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1; /* take remaining vertical space */
+    margin-bottom: 1rem;
+}
+
+/* Learn More link */
+.my-cardLinkEvent {
+    text-decoration: none;
+    color: #f54b4b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    align-self: flex-start;
+}
+
+.my-cardLinkEvent:hover {
+    color: #ff0c0c;
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .my-cardBodyEvent {
+        height: auto; /* remove fixed height on small screens */
+        overflow-y: visible;
+        padding: 1rem;
+    }
+
+    .my-cardTitleEvent {
+        font-size: 1.05rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Home Page ends ========================================================================= */
+
+/* SP's Future Plans and Achievement Page Starts .================================= */
+.my-navIntroBox a {
+    color: #be4b4b;
+}
+
+.my-navIntroBox a:hover {
+    color: #f91818;
+}
+
+.my-whiteBlank {
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .my-whiteBlank {
+        height: 20px;
+    }
+}
+
+.my-logoColor {
+    color: #be4b4b;
+}
+
+.my-imgRounded1 {
+    border-bottom-left-radius: 75px; 
+    border-top-right-radius: 75px;
+}
+
+.my-imgRounded2 {
+    border-top-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+}
+
+/* SP CORE */
+.my-spCoreList ul li {
+    list-style-type: none;
+}
+
+/*  */
+.my-imgBright {
+    transition: filter 1s ease;
+}
+
+.my-imgBright:hover {
+    filter: brightness(0.7);
+}
+
+/* Wishes */
+.my-wishBg {
+    background-image: url("../img/wishBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.my-img {
+    width: 100%;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.my-imgResize {
+    width: 100%;
+}
+
+/* For (form submitted successfully) */
+
+.my-checkIcon {
+    color: #5de56d;
+}
+
+.my-submittedBorder {
+    border-top: 5px solid #5de56d;
+}
+
+.my-submittedBox {
+    height: 250px;
+}
+
+
+
+

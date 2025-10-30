@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore Polytechnic</title>
+    <link rel="icon" type="image/png" href="../img/SPfavicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jvscript.js" defer></script>
+    
+    <!-- Bootstrap 5.3 cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- JavaScript 5.3 cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="javaScript"></script>
+
+    <!-- Font awesome icons cdn (own kit)-->
+    <script src="https://kit.fontawesome.com/029e5fae6f.js" crossorigin="anonymous"></script>
+
+</head>
+<body id="bodyWish">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-white my-navBorder">
+        <div class="container-fluid my-width">
+            <img src="../img/sp70logo.jpg" alt="SP Logo" class="my-LogoResize">
+            <span class="navbar-brand text-danger fs-1 fw-bold">SP</span>
+            <span class="text-danger fs-5 fw-bold">Singapore Polytechnic</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#smallScreenNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="smallScreenNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link my-navDesign" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link my-navDesign" href="futurePlans.html">Future Plans & Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link my-navDesign" href="wishes.html">Wishes Form</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form -->
+    <div class="container mt-5 mb-5 border shadow border-danger" id="wishes">
+        <div class="row mb-2">
+            <div class="col-md-6 my-wishBg">
+                <h2 class="text-center mt-5 text-danger fw-bold">Send Your Wishes for SP 70th</h2>
+                <form action="#" id="wishForm">
+                    <div class="form-group mb-2">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+        
+                    <div class="form-group mb-2">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+        
+                    <div class="form-group mb-2">
+                        <label for="status">Status</label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="">Select...</option>
+                            <option value="visitor">Visitor</option>
+                            <option value="alumni">Alumni</option>
+                            <option value="student">Current Student</option>
+                        </select>
+                    </div>
+        
+                    <div id="extraInformation">
+                        <div id="alumni" class="d-none">
+                            <div class="form-group mb-2">
+                                <label for="gradYear">Graduation Year</label>
+                                <input type="text" class="form-control" id="gradYear" placeholder="Enter your graduation year">
+                            </div>
+                        </div>
+        
+                        <div id="student" class="d-none mb-2">
+                            <div class="form-group">
+                                <label for="ichatEmail">ichat Email</label>
+                                <input type="email" class="form-control" id="ichatEmail" placeholder="Enter your ichat email" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="addmissionNo">Admission No</label>
+                                <input type="number" class="form-control" id="addmissionNo" placeholder="(without 'P')">
+                            </div>
+        
+                            <div class="form-group mb-2">
+                                <label for="school">Which academic school are you from?</label>
+                                <select class="form-control" id="school" required>
+                                    <option value="">Select</option>
+                                    <option value="abe">ABE</option>
+                                    <option value="sb">SB</option>
+                                    <option value="cls">CLS</option>
+                                    <option value="soc">SOC</option>
+                                    <option value="eee">EEE</option>
+                                    <option value="lsc">LSC</option>
+                                    <option value="mad">MAD</option>
+                                    <option value="mae">MAE</option>
+                                    <option value="ms">MS</option>
+                                    <option value="sma">SMA</option>
+                                </select>
+                            </div>
+        
+                            <div class="mb-2">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Year1
+                                    <label class="form-check-label" for="radio1"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Year2
+                                    <label class="form-check-label" for="radio2"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Year3
+                                    <label class="form-check-label" for="radio3"></label>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+        
+                    <div class="mb-2">
+                        <span>Gender : &nbsp;</span>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="check1" name="gender" value="male">
+                            <label class="form-check-label" for="check1">Male</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="check2" name="gender" value="female">
+                            <label class="form-check-label" for="check2">Female</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mb-2">
+                        <label for="wish">Your Wishes : </label>
+                        <textarea class="form-control" id="wish" rows="4" placeholder="Write your wishes here" required></textarea>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label" for="terms">I agree to the <a href="#" class="text-danger">terms and conditions</a></label>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-danger mb-2" id="submit">Submit</button>
+                        <button type="reset" class="btn btn-danger mb-2">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 bg-danger">
+                <img src="../img/spDoll3.jpg" alt="" class="img-fluid mb-5 my-imgResize mt-5">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-submittedBorder shadow mb-5 d-none mt-5" id="wishSubmitted">
+        <div class="text-center my-submittedBox">
+            <i class="fa-solid fa-circle-check my-checkIcon fa-2xl mt-5 mb-5"></i>
+            <p class="text-uppercase fw-bold mb-2">Thank You</p>
+            <p>Form has been successfully submitted</p><br>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mt-4">
+                    <div class="mb-5">
+                        <img src="../img/spFooter.png" alt="SP Logo" class="img-fluid">
+                    </div>
+                    <div class="mb-5">
+                        Singapore Polytechnic<br>
+                        500 Dover Road Singapore 139651
+                    </div>
+                </div>
+
+                <div class="col-md-9 mt-5 text-end">
+                    <span>Follow SP for up-to-date news: </span>
+                    <a href="https://www.facebook.com/singaporepolytechnic?mibextid=LQQJ4d"><i class="fa-brands fa-facebook p-1"></i></a>
+                    <a href="https://www.instagram.com/singaporepoly?igsh=MXF4ZmFmZTVtODJlbg=="><i class="fa-brands fa-instagram p-1"></i></a>
+                    <a href="https://www.youtube.com/@singaporepolytechnic"><i class="fa-brands fa-youtube p-1"></i></a>
+                    <a href="https://www.linkedin.com/company/singapore-polytechnic/jobs"><i class="fa-brands fa-linkedin p-1"></i></a>
+                    <a href="https://t.me/singaporepoly"><i class="fa-brands fa-telegram p-1"></i></a>
+                    <a href="https://www.tiktok.com/@singaporepoly"><i class="fa-brands fa-tiktok p-1"></i></a>
+                    <span>SP Apps:</span>
+                    <a href="https://www.sp.edu.sg/sp/about-sp/sp-mobile-apps"><i class="fa-solid fa-mobile"></i></a>
+                </div>
+
+            </div>
+
+            <div class="my-line"></div>
+
+            <div class="row">
+                <div class="col-md-8 mt-2">
+                    <p>Welcome to Singapore Polytechnic.<br>Start your journey with us&excl;</p>
+                </div>
+
+                <div class="col-md-4 text-end">
+                    <i class="fa-regular fa-copyright"></i>
+                    <span class="small">2024 Singapore Polytechnic</span>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+</body>
+</html>
